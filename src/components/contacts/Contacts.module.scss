@@ -1,0 +1,63 @@
+@use "../../sharedStyles/colors" as COLORS;
+
+// best practice for responsive css is to design for smallest screen first then for largers
+.contactsItemContainer {
+  overflow: scroll;
+  @media screen and (min-width: 1025px) {
+    column-count: 2;
+  }
+}
+
+.contactsListItem {
+  border-style: none none solid none;
+  border-color: COLORS.$BORDER_COLOR;
+  cursor: pointer;
+  padding: 2%;
+  margin-left: 2%;
+  break-inside: avoid;
+  margin-right: 2%;
+
+  span {
+    text-align: start;
+    display: flex;
+    flex: 1;
+  }
+}
+
+.detailsCard {
+  width: 100%;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: COLORS.$BORDER_COLOR;
+  padding: 1%;
+  display: flex;
+
+  img {
+    border-radius: 100px;
+    margin-right: 0.5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+
+  h4 {
+    color: COLORS.$DISABLED_TEXTS;
+  }
+}
+
+.detailsCardSubContainer {
+  display: flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+}
+
+.titles {
+  margin-right: 4%;
+  span {
+    font-weight: bold;
+  }
+}

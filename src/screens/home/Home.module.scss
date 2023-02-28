@@ -1,0 +1,7 @@
+@use "../../sharedStyles/colors" as COLORS;
+
+.container {
+  background-color: COLORS.$BACKGROUND_COLOR;
+  width: 100vw;
+  height: 100vh;
+}
